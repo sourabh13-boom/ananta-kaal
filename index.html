@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ananta Kaal | Timeless Watches</title>
-  <style>
- body {
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f5f5dc;        
-  color: #1B3022;             
+  background: #f5f5dc;
+  color: #1B3022;
 }
 
 header {
@@ -21,46 +19,36 @@ header {
   border-bottom: 1px solid #ddd;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 22px;
-  letter-spacing: 2px;
-  color: #1B3022;
-}
-
 nav a {
   color: #1B3022;
   margin-left: 20px;
   text-decoration: none;
-  font-size: 14px;
   font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 .hero {
   padding: 100px 40px;
   text-align: center;
   background: #f8f6ea;
+  animation: fadeIn 1.2s ease-in;
 }
 
 .hero h2 {
   font-size: 42px;
-  margin-bottom: 10px;
-  color: #1B3022;
-}
-
-.hero p {
-  font-size: 18px;
-  color: #1B3022;
 }
 
 .section {
   padding: 60px 40px;
+  animation: fadeUp 1s ease-in;
 }
 
 .section h3 {
   font-size: 28px;
   margin-bottom: 30px;
-  color: #1B3022;
 }
 
 .watches {
@@ -74,6 +62,12 @@ nav a {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.watch-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
 .watch-card img {
@@ -85,7 +79,7 @@ nav a {
 
 .watch-card h4,
 .watch-card p {
-  color: #f5f5dc;  
+  color: #f5f5dc;
 }
 
 .btn {
@@ -96,20 +90,64 @@ nav a {
   color: #000;
   text-decoration: none;
   border-radius: 20px;
-  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
-    
+
+.btn:hover {
+  background: #ffd700;
+}
+
+.contact-links a {
+  display: inline-block;
+  margin: 10px 15px 0 0;
+  color: #1B3022;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
 footer {
-  background: #f5f5dc;
   padding: 20px;
   text-align: center;
   font-size: 13px;
-  color: #1B3022;
   border-top: 1px solid #ddd;
 }
 
-  </style>
+.floating-insta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #d4af37;
+  color: #000;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+.floating-insta:hover {
+  background: #ffd700;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </head>
+
 <body>
 
 <header>
@@ -121,6 +159,7 @@ footer {
     <a href="#contact">Contact</a>
   </nav>
 </header>
+
 <section class="hero" id="home">
   <h2>Timeless Elegance</h2>
   <p>Premium watches crafted for everyday confidence</p>
@@ -128,48 +167,69 @@ footer {
 
 <section class="section" id="collection">
   <h3>Our Collection</h3>
-  <div class="watches">
 
+  <div class="watches">
     <div class="watch-card">
-      <img src="/ananta-kaal/images/rolex.jpg" alt="Rolex">
+      <img src="/ananta-kaal/images/rolex.jpg">
       <h4>Day Date 40</h4>
       <p>₹1,599</p>
-      <a class="btn" href="https://wa.me/918149481758">Enquire on WhatsApp</a>
+      <a class="btn" href="https://www.instagram.com/ananta.kaal" target="_blank">
+        Enquire on Instagram
+      </a>
     </div>
 
     <div class="watch-card">
-      <img src="/ananta-kaal/images/hublot.jpg" alt="Hublot">
+      <img src="/ananta-kaal/images/hublot.jpg">
       <h4>Big Bang Meca 10</h4>
       <p>₹1,699</p>
-      <a class="btn" href="https://wa.me/918149481758">Enquire on WhatsApp</a>
+      <a class="btn" href="https://www.instagram.com/ananta.kaal" target="_blank">
+        Enquire on Instagram
+      </a>
     </div>
 
     <div class="watch-card">
-      <img src="/ananta-kaal/images/ap.jpg" alt="Audemars Piguet">
+      <img src="/ananta-kaal/images/ap.jpg">
       <h4>Royal Oak</h4>
       <p>₹1,699</p>
-      <a class="btn" href="https://wa.me/918149481758">Enquire on WhatsApp</a>
+      <a class="btn" href="https://www.instagram.com/ananta.kaal" target="_blank">
+        Enquire on Instagram
+      </a>
     </div>
-    </div>
+  </div>
 </section>
+
 <section class="section" id="about">
   <h3>About Ananta Kaal</h3>
   <p style="max-width:700px;">
-    Ananta Kaal is a modern Indian watch brand focused on quality, durability, and timeless design.
-    Every timepiece is crafted to complement your personality and lifestyle.
+    Ananta Kaal is a modern Indian watch brand focused on timeless design,
+    durability, and elegance.
   </p>
 </section>
 
 <section class="section" id="contact">
-  <h3>Visit Our Store</h3>
+  <h3>Connect With Us</h3>
   <p>📍 Nashik, Maharashtra</p>
-  <p>📞 +91 8149481758</p>
-  <a class="btn" href="tel:+91-8149481758">Call Now</a>
+
+  <div class="contact-links">
+    <a href="https://www.instagram.com/ananta.kaal" target="_blank">
+      📷 Instagram – @ananta.kaal
+    </a>
+    <a href="mailto:anantakaal@gmail.com">
+      📧 Email – anantakaal@gmail.com
+    </a>
+  </div>
 </section>
 
 <footer>
   © 2026 Ananta Kaal Watches. All Rights Reserved.
 </footer>
+  
+<a class="floating-insta"
+   href="https://www.instagram.com/ananta.kaal"
+   target="_blank">
+  📷 DM on Instagram
+</a>
 
 </body>
 </html>
+
